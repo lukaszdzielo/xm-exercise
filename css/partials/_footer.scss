@@ -1,0 +1,29 @@
+footer {
+    --footer-bg: #000;
+    --footer-text-color: var(--gray-500);
+
+    background: var(--footer-bg);
+    color: var(--footer-text-color);
+    font-size: 0.75rem;
+    white-space: nowrap;
+    a, a:hover {
+        color: var(--footer-text-color);
+        text-decoration: none;
+    }
+    li:not(:last-of-type):after {
+        display: inline-block;
+        content: "|";
+        margin: 0 .25rem;
+    }
+}
+.footer {
+    &-social {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        .fa-brands {
+            margin-inline-start: 0.625rem;
+            font-size: 1.125rem;
+        }
+    }
+}
