@@ -1,0 +1,96 @@
+// Color system ~6
+$gray-500: #888;
+$gray-700: #444;
+
+$red:     #D51820;
+$green:   #29A643;
+
+$primary:       $red;
+$secondary:     $green;
+
+// Options ~333
+$variable-prefix: '';
+
+
+// Spacing ~367
+// scss-docs-start spacer-variables-maps
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer * 0.75,
+    4: $spacer * 1,
+    5: $spacer * 1.25,
+    6: $spacer * 1.5,
+    7: $spacer * 1.75,
+    8: $spacer * 2,
+    9: $spacer * 2.25,
+    10: $spacer * 2.5,
+    11: $spacer * 2.75,
+    12: $spacer * 3,
+    13: $spacer * 3.25,
+    14: $spacer * 3.5,
+    15: $spacer * 3.75,
+    16: $spacer * 4,
+    17: $spacer * 4.25,
+    18: $spacer * 4.5,
+    19: $spacer * 4.75,
+    20: $spacer * 5,
+    21: $spacer * 5.25,
+    22: $spacer * 5.5,
+    23: $spacer * 5.75,
+    24: $spacer * 6,
+    25: $spacer * 6.25,
+    26: $spacer * 6.5,
+    27: $spacer * 6.75,
+    28: $spacer * 7,
+    29: $spacer * 7.25,
+    30: $spacer * 7.5,
+    31: $spacer * 7.75,
+    32: $spacer * 8,
+    40: $spacer * 10,
+);
+// scss-docs-end spacer-variables-maps
+
+
+// Body ~397
+$body-color: $gray-700;
+
+
+// Grid breakpoints ~425
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+// scss-docs-end grid-breakpoints
+
+
+// Grid containers ~445
+// scss-docs-start container-max-widths
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+// scss-docs-end container-max-widths
+
+
+// Container padding ~470
+$container-padding-x: 1.875rem;
+
+
+// Typography ~537
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-size-root: 1rem;
+$font-size-base: 0.875rem;
+$line-height-base: 1.4;
+
+
+// Buttons ~742
+$btn-font-family: 'Bebas Neue', cursive;
