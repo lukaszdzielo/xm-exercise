@@ -26903,6 +26903,10 @@ textarea.form-control-lg {
   }
 }
 
+.dsc p:last-of-type {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
 @media (min-width: 768px) {
   .dsc-custom_1 {
     font-size: 1rem;
@@ -27002,6 +27006,7 @@ textarea.form-control-lg {
   }
 }
 .grid-custom_3 .item {
+  position: relative;
   border-radius: 0.625rem;
   padding: 2.5rem 2rem;
   height: 100%;
@@ -27056,9 +27061,41 @@ textarea.form-control-lg {
     max-width: 200px;
   }
 }
+.grid-custom_3 .item .icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (min-width: 768px) {
+  .grid-custom_3 .item .icon {
+    top: 30px;
+    right: 30px;
+    width: 90px;
+    height: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-custom_3 .item .icon {
+    width: 70px;
+    height: 70px;
+  }
+}
 @media (min-width: 1200px) {
   .grid-custom_3 .item.long .dsc {
     max-width: unset;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-custom_3 .item.long .icon {
+    top: unset;
+    bottom: 30px;
+    left: 30px;
+    width: unset;
+    height: 220px;
   }
 }
 @media (min-width: 1200px) {
@@ -27066,9 +27103,11 @@ textarea.form-control-lg {
     max-width: 400px;
   }
 }
-.grid-custom_3 .item p:last-of-type {
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
+@media (min-width: 1200px) {
+  .grid-custom_3 .item.wide .icon {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .btn-secondary {
@@ -27092,10 +27131,6 @@ textarea.form-control-lg {
 .card-custom_1 > *:not(:first-child) {
   -webkit-margin-before: 1rem;
           margin-block-start: 1rem;
-}
-.card-custom_1 p:last-of-type {
-  -webkit-margin-after: 0;
-          margin-block-end: 0;
 }
 .card-custom_2 {
   border: 3px solid var(--white);
