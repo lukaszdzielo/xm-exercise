@@ -1,4 +1,6 @@
 // Color system ~6
+$gray-100: #f4f4f4;
+$gray-400: #ccc;
 $gray-500: #888;
 $gray-700: #444;
 
@@ -82,7 +84,7 @@ $container-max-widths: (
 
 
 // Container padding ~470
-$container-padding-x: 1.875rem;
+$container-padding-x: 2rem;
 
 
 // Typography ~537
@@ -94,3 +96,17 @@ $line-height-base: 1.4;
 
 // Buttons ~742
 $btn-font-family: 'Bebas Neue', cursive;
+$btn-line-height: 1;
+
+$btn-font-size-lg: 24px;
+
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+// Forms ~793
+$form-label-font-weight: 700;
+$input-padding-y: .4375rem;
+$input-font-size: 1rem;
+$input-line-height: 1.5;
+$input-border-radius: 0;
