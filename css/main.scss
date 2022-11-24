@@ -1,4 +1,6 @@
 @import "partials/fonts";
+
+// Boostrap
 @import "partials/variables";
 
 // scss-docs-start import-stack
@@ -48,6 +50,39 @@
 // Utilities
 @import "../lib/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+// Bootstrap end
 
+// Swiper
+@import "../lib/swiper/swiper";
+// @import "../lib/swiper/components/scss/a11y";
+// @import "../lib/swiper/components/scss/autoplay";
+// @import "../lib/swiper/components/scss/controller";
+// @import "../lib/swiper/components/scss/effect-cards";
+// @import "../lib/swiper/components/scss/effect-coverflow";
+// @import "../lib/swiper/components/scss/effect-creative";
+// @import "../lib/swiper/components/scss/effect-cube";
+// @import "../lib/swiper/components/scss/effect-fade";
+// @import "../lib/swiper/components/scss/effect-flip";
+// @import "../lib/swiper/components/scss/free-mode";
+// @import "../lib/swiper/components/scss/grid";
+// @import "../lib/swiper/components/scss/hash-navigation";
+// @import "../lib/swiper/components/scss/history";
+// @import "../lib/swiper/components/scss/keyboard";
+// @import "../lib/swiper/components/scss/lazy";
+// @import "../lib/swiper/components/scss/manipulation";
+// @import "../lib/swiper/components/scss/mousewheel";
+@import "../lib/swiper/components/scss/navigation";
+// @import "../lib/swiper/components/scss/pagination";
+// @import "../lib/swiper/components/scss/parallax";
+// @import "../lib/swiper/components/scss/scrollbar";
+// @import "../lib/swiper/components/scss/thumbs";
+// @import "../lib/swiper/components/scss/virtual";
+// @import "../lib/swiper/components/scss/zoom";
+// Swiper end
+
+// Custom
 @import "partials/general";
+@import "partials/header";
 @import "partials/footer";
+@import "partials/forms";
+// Custom end

@@ -1,0 +1,11 @@
+.password-check {
+    color: var(--gray-500);
+    @include font-size(.6rem);
+    .item {
+        display: flex;
+        align-items: center;
+        &:not(:first-of-type) {
+            margin-block-start: .0625rem;
+        }
+    }
+}
