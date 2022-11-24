@@ -10,11 +10,11 @@
         font-weight: 700;
     }
     &-custom_1 {
+        letter-spacing: -0.02em;
         @include media-breakpoint-up(xl) {
             @include font-size(5rem);
             line-height: 1.1;
             font-weight: 700;
-            letter-spacing: -0.02em;
         }
         span {
             color: var(--primary);
@@ -31,6 +31,27 @@
                 width: 72px;
             }
         }
+    }
+    &-custom_2 {
+        &:after {
+            content: "";
+            display: block;
+            margin: 1.5rem auto;
+            width: 70px;
+            height: 4px;
+            background: var(--secondary);
+            @include media-breakpoint-up(xl) {
+            }
+        }
+    }
+    &-custom_3 {
+        @include font-size(1.75rem);
+        @include media-breakpoint-up(xl) {
+            @include font-size(2.25rem);
+        }
+    }
+    strong {
+        font-weight: 700;
     }
 }
 
@@ -238,6 +259,16 @@
         color: var(--white);
         opacity: 1;
     }
+    &-custom_1 {
+        width: 100%;
+        max-width: 345px;
+    }
+    &-xl-custom_1 {
+        width: 100%;
+        @include media-breakpoint-up(xl) {
+            max-width: 345px;
+        }
+    }
 }
 
 .card {
@@ -252,6 +283,38 @@
         border: 3px solid var(--white);
         border-radius: 0;
         background: #dadada;
+    }
+    &-custom_3 {
+        border-color: rgba(167, 167, 167, 0.2);
+        border-radius: 1.5rem;
+        padding: .75rem 1rem 1rem 1rem;
+        background: rgba(140, 140, 140, 0.1);
+        overflow: hidden;
+        .info {
+            display: flex;
+            align-items: center;
+        }
+        .icon {
+            margin-inline-end: .75rem;
+        }
+        .symbol {
+            margin-inline-end: .75rem;
+            font-size: .75rem;
+        }
+        .name {
+            font-size: .625rem;
+        }
+        .price {
+            @include font-size(1.5rem);
+            font-weight: 700;
+            text-shadow: 0px 0px 65.8195px #FFC255;
+        }
+        .value {
+            margin-block-start: .625rem;
+            padding-block-start: .625rem;
+            border-top: 1px solid rgba(255,255,255,.15);
+            @include font-size(.75rem);
+        }
     }
 }
 
@@ -272,6 +335,32 @@
             &:after {
                 content: "\f054";
             }
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.bg {
+    position: relative;
+    height: 0;
+    z-index: -1;
+    pointer-events: none;
+    &-symbol_1 {
+        top: 0;
+        left: 0;
+        height: 430px;
+        transform: translate(-50%, -20%);
+        @include media-breakpoint-up(md) {
+            height: 550px;
+            transform: translate(-30%, -15%);
+        }
+        @include media-breakpoint-up(xl) {
+            height: 850px;
+            transform: translate(-50%, -15%);
         }
     }
 }
