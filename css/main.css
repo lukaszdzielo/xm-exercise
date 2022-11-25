@@ -27453,13 +27453,14 @@ textarea.form-control-lg {
   align-items: center;
 }
 .card-custom_3 .icon {
-  -webkit-margin-end: 0.75rem;
-          margin-inline-end: 0.75rem;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+  flex: 0 0 auto;
 }
 .card-custom_3 .symbol {
-  -webkit-margin-end: 0.75rem;
-          margin-inline-end: 0.75rem;
-  font-size: 0.75rem;
+  -webkit-margin-end: 0.5rem;
+          margin-inline-end: 0.5rem;
+  font-size: 0.5rem;
 }
 .card-custom_3 .name {
   border-radius: 0.25rem;
