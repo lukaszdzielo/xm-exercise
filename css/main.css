@@ -6,20 +6,6 @@
   font-weight: 400;
   src: local(""), url("../fonts/bebas-neue/bebas-neue-v9-latin-regular.woff2") format("woff2"), url("../fonts/bebas-neue/bebas-neue-v9-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* roboto-100 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 100;
-  src: local(""), url("../fonts/roboto/roboto-v30-latin-100.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-100.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-100italic - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 100;
-  src: local(""), url("../fonts/roboto/roboto-v30-latin-100italic.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-100italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 /* roboto-300 - latin */
 @font-face {
   font-family: "Roboto";
@@ -48,20 +34,6 @@
   font-weight: 400;
   src: local(""), url("../fonts/roboto/roboto-v30-latin-regular.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* roboto-500 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 500;
-  src: local(""), url("../fonts/roboto/roboto-v30-latin-500.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-500.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-500italic - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 500;
-  src: local(""), url("../fonts/roboto/roboto-v30-latin-500italic.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-500italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 /* roboto-700 - latin */
 @font-face {
   font-family: "Roboto";
@@ -75,20 +47,6 @@
   font-style: italic;
   font-weight: 700;
   src: local(""), url("../fonts/roboto/roboto-v30-latin-700italic.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-700italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-900 - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 900;
-  src: local(""), url("../fonts/roboto/roboto-v30-latin-900.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-900italic - latin */
-@font-face {
-  font-family: "Roboto";
-  font-style: italic;
-  font-weight: 900;
-  src: local(""), url("../fonts/roboto/roboto-v30-latin-900italic.woff2") format("woff2"), url("../fonts/roboto/roboto-v30-latin-900italic.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 /*!
  * Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com
@@ -27444,6 +27402,7 @@ textarea.form-control-lg {
 }
 
 .btn-secondary {
+  --btn-active-color: var(--white);
   color: var(--white);
 }
 .btn-lg, .btn-group-lg > .btn {
@@ -27503,7 +27462,20 @@ textarea.form-control-lg {
   font-size: 0.75rem;
 }
 .card-custom_3 .name {
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.5rem;
+  background: var(--white);
+  color: var(--body-color);
   font-size: 0.625rem;
+  font-weight: 700;
+}
+.card-custom_3 .value {
+  -webkit-margin-before: 0.625rem;
+          margin-block-start: 0.625rem;
+  -webkit-padding-before: 0.625rem;
+          padding-block-start: 0.625rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.75rem;
 }
 .card-custom_3 .price {
   font-size: calc(1.275rem + 0.3vw);
@@ -27515,13 +27487,11 @@ textarea.form-control-lg {
     font-size: 1.5rem;
   }
 }
-.card-custom_3 .value {
-  -webkit-margin-before: 0.625rem;
-          margin-block-start: 0.625rem;
-  -webkit-padding-before: 0.625rem;
-          padding-block-start: 0.625rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  font-size: 0.75rem;
+.card-custom_3 .percent.up {
+  color: #B1FFC2;
+}
+.card-custom_3 .percent.down {
+  color: #FFA3A6;
 }
 
 .swiper-button-prev:after, .swiper-button-next:after {
