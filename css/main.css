@@ -27562,7 +27562,77 @@ textarea.form-control-lg {
 @media (min-width: 1200px) {
   .bg-symbol_1 {
     height: 850px;
-    transform: translate(-50%, -15%);
+    transform: translate(-50%, -10%);
+  }
+}
+.bg-symbol_2 {
+  top: -200px;
+  right: -250px;
+}
+.hero .bg {
+  position: absolute;
+  inset: 0;
+  height: unset;
+}
+.bg-symbol_3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.bg-symbol_4 {
+  position: absolute;
+  bottom: -550px;
+  right: 0;
+}
+.bg-symbol_5 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+}
+@media (min-width: 768px) {
+  .bg-symbol_5 {
+    width: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .bg-symbol_5 {
+    left: 0;
+    width: 250px;
+  }
+}
+.bg-symbol_9 {
+  position: absolute;
+  bottom: -80px;
+  right: -70px;
+  width: 150px;
+}
+@media (min-width: 768px) {
+  .bg-symbol_9 {
+    width: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .bg-symbol_9 {
+    left: 0;
+    width: 250px;
+  }
+}
+.bg-symbol_10 {
+  position: absolute;
+  top: 50px;
+  right: -50px;
+  width: 100px;
+}
+@media (min-width: 768px) {
+  .bg-symbol_10 {
+    width: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .bg-symbol_10 {
+    left: 0;
+    width: 250px;
   }
 }
 

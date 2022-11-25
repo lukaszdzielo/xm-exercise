@@ -360,7 +360,75 @@
         }
         @include media-breakpoint-up(xl) {
             height: 850px;
-            transform: translate(-50%, -15%);
+            transform: translate(-50%, -10%);
+        }
+    }
+    &-symbol_2 {
+        top: -200px;
+        right: -250px;
+    }
+    .hero & {
+        position: absolute;
+        inset: 0;
+        height: unset;
+    }
+    &-symbol_3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    &-symbol_4 {
+        position: absolute;
+        bottom: -550px;
+        right: 0;
+    }
+    &-symbol_5 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+        @include media-breakpoint-up(md) {
+            width: 180px;
+        }
+        @include media-breakpoint-up(xl) {
+            left: 0;
+            width: 250px;
+        }
+    }
+    &-symbol_6 {
+
+    }
+    &-symbol_7 {
+
+    }
+    &-symbol_8 {
+
+    }
+    &-symbol_9 {
+        position: absolute;
+        bottom: -80px;
+        right: -70px;
+        width: 150px;
+        @include media-breakpoint-up(md) {
+            width: 180px;
+        }
+        @include media-breakpoint-up(xl) {
+            left: 0;
+            width: 250px;
+        }
+    }
+    &-symbol_10 {
+        position: absolute;
+        top: 50px;
+        right: -50px;
+        width: 100px;
+        @include media-breakpoint-up(md) {
+            width: 180px;
+        }
+        @include media-breakpoint-up(xl) {
+            left: 0;
+            width: 250px;
         }
     }
 }
