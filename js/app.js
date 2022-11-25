@@ -47,3 +47,6 @@ fetch(cryptoURL)
             document.querySelector('#'+cryptoID[i][0]).querySelector('.percent').innerHTML = percent;
         }
     })
+    .catch(error => {
+        console.log('API failure. ' + error);
+    });
