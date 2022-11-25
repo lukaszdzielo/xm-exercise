@@ -296,11 +296,12 @@
             align-items: center;
         }
         .icon {
-            margin-inline-end: .75rem;
+            margin-inline-end: .5rem;
+            flex: 0 0 auto;
         }
         .symbol {
-            margin-inline-end: .75rem;
-            font-size: .75rem;
+            margin-inline-end: .5rem;
+            font-size: .5rem;
         }
         .name {
             border-radius: .25rem;
