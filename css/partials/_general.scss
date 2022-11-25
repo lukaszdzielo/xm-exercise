@@ -397,13 +397,37 @@
         }
     }
     &-symbol_6 {
-
+        position: absolute;
+        top: 180px;
+        left: -90px;
+        width: 160px;
+        @include media-breakpoint-up(xl) {
+            top: 240px;
+            left: -130px;
+            width: 240px;
+        }
     }
     &-symbol_7 {
-
+        position: absolute;
+        bottom: 90px;
+        left: 40px;
+        width: 70px;
+        @include media-breakpoint-up(xl) {
+            bottom: 90px;
+            left: 150px;
+            width: 100px;
+        }
     }
     &-symbol_8 {
-
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        width: 50px;
+        @include media-breakpoint-up(xl) {
+            top: 40px;
+            right: 80px;
+            width: 80px;
+        }
     }
     &-symbol_9 {
         position: absolute;
@@ -411,11 +435,15 @@
         right: -70px;
         width: 150px;
         @include media-breakpoint-up(md) {
-            width: 180px;
+            top: 110px;
+            bottom: unset;
+            right: -130px;
+            width: 240px;
         }
         @include media-breakpoint-up(xl) {
-            left: 0;
-            width: 250px;
+            top: 150px;
+            right: -200px;
+            width: 370px;
         }
     }
     &-symbol_10 {
@@ -424,11 +452,16 @@
         right: -50px;
         width: 100px;
         @include media-breakpoint-up(md) {
-            width: 180px;
+            top: unset;
+            right: 20px;
+            bottom: 20px;
+            width: 150px;
         }
         @include media-breakpoint-up(xl) {
-            left: 0;
-            width: 250px;
+            top: unset;
+            right: 80px;
+            bottom: 20px;
+            width: 230px;
         }
     }
 }
