@@ -55,56 +55,115 @@ fetch(cryptoURL)
 //
 
 //
-const password = document.querySelector('#inputPassword');
-function passwordCheck() {
-    
-    const validMinMax = document.querySelector('#validMinMax');
-    if (password.value.length >= 8 && password.value.length <=15) { 
-        validMinMax.classList.remove('text-danger');
-        validMinMax.classList.add('text-success');
+const inputEmail = document.querySelector('#inputEmail');
+const inputPassword = document.querySelector('#inputPassword');
+const button = document.querySelector('#formSubmit');
+
+function emailValidation() {
+    if (inputEmail.value.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+        inputEmail.classList.remove('is-invalid');
+        inputEmail.classList.add('is-valid');
     } else {
-        validMinMax.classList.remove('text-success');
-        validMinMax.classList.add('text-danger');
+        inputEmail.classList.remove('is-valid');
+        inputEmail.classList.add('is-invalid');
     }
 
-    const validNumber = document.querySelector('#validNumber');
-    if (password.value.match(/[0-9]/)) {
-        validNumber.classList.remove('text-danger');
-        validNumber.classList.add('text-success');
+    submitValidation()
+}
+function passwordValidation() {
+
+    let validMinMax = document.querySelector('#validMinMax');
+    if (inputPassword.value.length >= 8 && inputPassword.value.length <=15) { 
+        validMinMax.classList.remove('invalid-feedback');
+        validMinMax.classList.add('valid-feedback');
+        validMinMax = 1;
     } else {
-        validNumber.classList.remove('text-success');
-        validNumber.classList.add('text-danger');
+        validMinMax.classList.remove('valid-feedback');
+        validMinMax.classList.add('invalid-feedback');
+        validMinMax = 0;
     }
 
-    const validLower = document.querySelector('#validLower');
-    if (password.value.match(/[a-z]/)) {
-        validLower.classList.remove('text-danger');
-        validLower.classList.add('text-success');
+    let validNumber = document.querySelector('#validNumber');
+    if (inputPassword.value.match(/[0-9]/)) {
+        validNumber.classList.remove('invalid-feedback');
+        validNumber.classList.add('valid-feedback');
+        validNumber = 1;
     } else {
-        validLower.classList.remove('text-success');
-        validLower.classList.add('text-danger');
+        validNumber.classList.remove('valid-feedback');
+        validNumber.classList.add('invalid-feedback');
+        validNumber = 0;
     }
 
-    const validUpper = document.querySelector('#validUpper');
-    if (password.value.match(/[A-Z]/)) {
-        validUpper.classList.remove('text-danger');
-        validUpper.classList.add('text-success');
+    let validLower = document.querySelector('#validLower');
+    if (inputPassword.value.match(/[a-z]/)) {
+        validLower.classList.remove('invalid-feedback');
+        validLower.classList.add('valid-feedback');
+        validLower = 1;
     } else {
-        validUpper.classList.remove('text-success');
-        validUpper.classList.add('text-danger');
+        validLower.classList.remove('valid-feedback');
+        validLower.classList.add('invalid-feedback');
+        validLower = 0;
     }
 
-    const validSpecial = document.querySelector('#validSpecial');
-    if (password.value.match(/[ #[\]()@$&*!?|,.^/\\+_\- ]/)) {
-        validSpecial.classList.remove('text-danger');
-        validSpecial.classList.add('text-success');
+    let validUpper = document.querySelector('#validUpper');
+    if (inputPassword.value.match(/[A-Z]/)) {
+        validUpper.classList.remove('invalid-feedback');
+        validUpper.classList.add('valid-feedback');
+        validUpper = 1;
     } else {
-        validSpecial.classList.remove('text-success');
-        validSpecial.classList.add('text-danger');
+        validUpper.classList.remove('valid-feedback');
+        validUpper.classList.add('invalid-feedback');
+        validUpper = 0;
     }
 
+    let validSpecial = document.querySelector('#validSpecial');
+    if (inputPassword.value.match(/[ #[\]()@$&*!?|,.^/\\+_\- ]/)) {
+        validSpecial.classList.remove('invalid-feedback');
+        validSpecial.classList.add('valid-feedback');
+        validSpecial = 1;
+    } else {
+        validSpecial.classList.remove('valid-feedback');
+        validSpecial.classList.add('invalid-feedback');
+        validSpecial = 0;
+    }
+
+    if ( (validMinMax + validNumber + validLower + validUpper + validSpecial) == 5) {
+        inputPassword.classList.remove('is-invalid');
+        inputPassword.classList.add('is-valid');
+    }else {
+        inputPassword.classList.remove('is-valid');
+        inputPassword.classList.add('is-invalid');
+    }
+
+    submitValidation()
 }
 
-password.addEventListener('keyup', passwordCheck);
+function submitValidation() {
+    // asAS./12
+    if (inputEmail.classList.contains('is-valid') && inputPassword.classList.contains('is-valid')) {
+        button.classList.remove('disabled');
+    } else if (inputEmail.classList.contains('is-invalid') || inputPassword.classList.contains('is-invalid')) {
+        button.classList.add('disabled');
+    }
+}
 
+function formSubmit(e) {
+    e.preventDefault();
+    document.querySelector('#formInfo').classList.remove('m-0');
+    document.querySelector('#formInfo').classList.add('mt-8');
+    document.querySelector('#formInfo').innerHTML = `
+        <div class="p-8 text-secondary border border-secondary" style="background: #F3FEF4;">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-check fa-4x me-3"></i>
+                <div class="fs-3">Registration Successful</div>
+            </div>
+            <div class="mt-6">
+                <p>Thank you for registering for our event with XM. You will receive an email shortly with confirmation of your registration.</p>
+            </div>
+        </div>`;
+}
+
+inputEmail.addEventListener('keyup', emailValidation);
+inputPassword.addEventListener('keyup', passwordValidation);
+button.addEventListener('click', formSubmit);
 //

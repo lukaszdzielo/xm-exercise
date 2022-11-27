@@ -255,11 +255,12 @@
                             </div>
                         </div>
                         <div class="col-md-8 col-xl-9 mt-17">
-                            <form class="row gx-0 gy-4 gx-md-5 justify-content-center">
+                            
+                            <form id="form" class="row gx-0 gy-4 gx-md-5 justify-content-center">
                                 <div class="col-xl-6">
                                     <label for="inputEmail" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="inputEmail">
-                                    <div class="invalid-feedback">
+                                    <div class="invalid-feedback mt-4">
                                         Please Enter Valid Email.
                                     </div>
                                 </div>
@@ -267,7 +268,7 @@
                                     <label for="inputPassword" class="form-label">Password</label>
                                     <input type="password" class="form-control" id="inputPassword">
                                     <div></div>
-                                    <div class="password-check mt-2">
+                                    <div class="password-check mt-4">
                                         <div id="validMinMax" class="item">
                                             <i class="fa-regular fa-circle fa-xs me-2"></i>
                                             <div>8 - 15 characters</div>
@@ -290,19 +291,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 mt-8 d-none">
-                                    <div class="p-8 text-secondary border border-secondary" style="background: #F3FEF4;">
-                                        <div class="d-flex align-items-center">
-                                            <i class="fa-solid fa-circle-check fa-4x me-3"></i>
-                                            <div class="fs-3">Registration Successful</div>
-                                        </div>
-                                        <div class="mt-6">
-                                            <p>Thank you for registering for our event with XM. You will receive an email shortly with confirmation of your registration.</p>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div id="formInfo" class="col-12 m-0"></div>
                                 <div class="col-12 col-xl-5 mt-8">
-                                    <button type="submit" class="btn btn-lg btn-xl-custom_1 btn-secondary disabled">Register now</button>
+                                    <button id="formSubmit" type="submit" class="btn btn-lg btn-xl-custom_1 btn-secondary disabled">Register now</button>
                                 </div>
                             </form>
                             <div class="text-center">
