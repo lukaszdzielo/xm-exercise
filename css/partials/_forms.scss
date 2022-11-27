@@ -1,6 +1,6 @@
 .password-check {
     color: var(--gray-500);
-    @include font-size(.6rem);
+    @include font-size(.75rem);
     .item {
         display: flex;
         align-items: center;
@@ -8,4 +8,8 @@
             margin-block-start: .0625rem;
         }
     }
+}
+.valid-feedback,
+.invalid-feedback {
+    @include font-size(.75rem);
 }
