@@ -1,12 +1,8 @@
-//
 const swiper = new Swiper('.carousel-event_gallery', {
-    // Optional parameters
     slidesPerView: 2,
     spaceBetween: 28,
     watchOverflow: true,
     loop: true,
-  
-    // Navigation arrows
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -16,15 +12,12 @@ const swiper = new Swiper('.carousel-event_gallery', {
             slidesPerView: 4,
             spaceBetween: 36
         },
-        // when window width is >= 640px
         1200: {
             slidesPerView: 5,
         }
     }
 });
-//
 
-//
 const crypto = document.querySelector('#crypto').children.length;
 const cryptoURL = 'https://api.coinlore.net/api/tickers/';
 const cryptoID = [ ['BTC', 0], ['ETH', 1], ['XRP', 6], ['LTC', 11], ['BCH',23] ];
@@ -62,7 +55,6 @@ fetch(cryptoURL)
         console.log('API failure. ' + error);
     });
 
-//
 const inputEmail = document.querySelector('#inputEmail');
 const inputPassword = document.querySelector('#inputPassword');
 const button = document.querySelector('#formSubmit');
@@ -78,60 +70,81 @@ function emailValidation() {
 
     submitValidation()
 }
+
+const formInputStatus = (field, status) => {
+    if (status) {
+        field.classList.remove('invalid-feedback');
+        field.classList.add('valid-feedback');
+    } else {
+        field.classList.remove('valid-feedback');
+        field.classList.add('invalid-feedback');
+    }
+}
+
 function passwordValidation() {
 
     let validMinMax = document.querySelector('#validMinMax');
-    if (inputPassword.value.length >= 8 && inputPassword.value.length <=15) { 
-        validMinMax.classList.remove('invalid-feedback');
-        validMinMax.classList.add('valid-feedback');
+    if (inputPassword.value.length >= 8 && inputPassword.value.length <=15) {
+        formInputStatus(validMinMax, true);
+        // validMinMax.classList.remove('invalid-feedback');
+        // validMinMax.classList.add('valid-feedback');
         validMinMax = 1;
     } else {
-        validMinMax.classList.remove('valid-feedback');
-        validMinMax.classList.add('invalid-feedback');
+        formInputStatus(validMinMax, false);
+        // validMinMax.classList.remove('valid-feedback');
+        // validMinMax.classList.add('invalid-feedback');
         validMinMax = 0;
     }
 
     let validNumber = document.querySelector('#validNumber');
     if (inputPassword.value.match(/[0-9]/)) {
-        validNumber.classList.remove('invalid-feedback');
-        validNumber.classList.add('valid-feedback');
+        formInputStatus(validNumber, true);
+        // validNumber.classList.remove('invalid-feedback');
+        // validNumber.classList.add('valid-feedback');
         validNumber = 1;
     } else {
-        validNumber.classList.remove('valid-feedback');
-        validNumber.classList.add('invalid-feedback');
+        formInputStatus(validNumber, false);
+        // validNumber.classList.remove('valid-feedback');
+        // validNumber.classList.add('invalid-feedback');
         validNumber = 0;
     }
 
     let validLower = document.querySelector('#validLower');
     if (inputPassword.value.match(/[a-z]/)) {
-        validLower.classList.remove('invalid-feedback');
-        validLower.classList.add('valid-feedback');
+        formInputStatus(validLower, true);
+        // validLower.classList.remove('invalid-feedback');
+        // validLower.classList.add('valid-feedback');
         validLower = 1;
     } else {
-        validLower.classList.remove('valid-feedback');
-        validLower.classList.add('invalid-feedback');
+        formInputStatus(validLower, false);
+        // validLower.classList.remove('valid-feedback');
+        // validLower.classList.add('invalid-feedback');
         validLower = 0;
     }
 
     let validUpper = document.querySelector('#validUpper');
     if (inputPassword.value.match(/[A-Z]/)) {
-        validUpper.classList.remove('invalid-feedback');
-        validUpper.classList.add('valid-feedback');
+        formInputStatus(validUpper, true);
+        // validUpper.classList.remove('invalid-feedback');
+        // validUpper.classList.add('valid-feedback');
         validUpper = 1;
     } else {
-        validUpper.classList.remove('valid-feedback');
-        validUpper.classList.add('invalid-feedback');
+        formInputStatus(validUpper, false);
+        // validUpper.classList.remove('valid-feedback');
+        // validUpper.classList.add('invalid-feedback');
         validUpper = 0;
     }
 
     let validSpecial = document.querySelector('#validSpecial');
     if (inputPassword.value.match(/[ #[\]()@$&*!?|,.^/\\+_\- ]/)) {
-        validSpecial.classList.remove('invalid-feedback');
-        validSpecial.classList.add('valid-feedback');
+        formInputStatus(validSpecial, true);
+        // validSpecial.classList.remove('invalid-feedback');
+        // validSpecial.classList.add('valid-feedback');
         validSpecial = 1;
     } else {
-        validSpecial.classList.remove('valid-feedback');
-        validSpecial.classList.add('invalid-feedback');
+        formInputStatus(validSpecial, false);
+        // validSpecial.classList.remove('valid-feedback');
+        // validSpecial.classList.add('invalid-feedback');
         validSpecial = 0;
     }
 
@@ -147,7 +160,6 @@ function passwordValidation() {
 }
 
 function submitValidation() {
-    // asAS./12
     if (inputEmail.classList.contains('is-valid') && inputPassword.classList.contains('is-valid')) {
         button.classList.remove('disabled');
     } else if (inputEmail.classList.contains('is-invalid') || inputPassword.classList.contains('is-invalid')) {
