@@ -26,12 +26,9 @@ const cryptoID2 = [ 'BTC', 'ETH', 'XRP', 'LTC', 'BCH' ];
 fetch(cryptoURL)
     .then(res => res.json())
     .then(res => {
-        // console.log(res.data);
         for (let i = 0; i <= cryptoID2.length-1; i++) {
             for (let j = 0; j <= res.data.length-1; j++) {
-                // console.log(i, j, cryptoID2[i], '=', res.data[j].symbol)
                 if (cryptoID2[i] === res.data[j].symbol) {
-                    // console.log(res.data[j].price_usd)
                     const price = Number(res.data[j].price_usd).toLocaleString('en');
                     let percent = Number(res.data[j].percent_change_24h).toLocaleString('en');
                     document.querySelector('#'+cryptoID[i][0]).querySelector('.price').innerHTML = '$' + price;
@@ -86,65 +83,45 @@ function passwordValidation() {
     let validMinMax = document.querySelector('#validMinMax');
     if (inputPassword.value.length >= 8 && inputPassword.value.length <=15) {
         formInputStatus(validMinMax, true);
-        // validMinMax.classList.remove('invalid-feedback');
-        // validMinMax.classList.add('valid-feedback');
         validMinMax = 1;
     } else {
         formInputStatus(validMinMax, false);
-        // validMinMax.classList.remove('valid-feedback');
-        // validMinMax.classList.add('invalid-feedback');
         validMinMax = 0;
     }
 
     let validNumber = document.querySelector('#validNumber');
     if (inputPassword.value.match(/[0-9]/)) {
         formInputStatus(validNumber, true);
-        // validNumber.classList.remove('invalid-feedback');
-        // validNumber.classList.add('valid-feedback');
         validNumber = 1;
     } else {
         formInputStatus(validNumber, false);
-        // validNumber.classList.remove('valid-feedback');
-        // validNumber.classList.add('invalid-feedback');
         validNumber = 0;
     }
 
     let validLower = document.querySelector('#validLower');
     if (inputPassword.value.match(/[a-z]/)) {
         formInputStatus(validLower, true);
-        // validLower.classList.remove('invalid-feedback');
-        // validLower.classList.add('valid-feedback');
         validLower = 1;
     } else {
         formInputStatus(validLower, false);
-        // validLower.classList.remove('valid-feedback');
-        // validLower.classList.add('invalid-feedback');
         validLower = 0;
     }
 
     let validUpper = document.querySelector('#validUpper');
     if (inputPassword.value.match(/[A-Z]/)) {
         formInputStatus(validUpper, true);
-        // validUpper.classList.remove('invalid-feedback');
-        // validUpper.classList.add('valid-feedback');
         validUpper = 1;
     } else {
         formInputStatus(validUpper, false);
-        // validUpper.classList.remove('valid-feedback');
-        // validUpper.classList.add('invalid-feedback');
         validUpper = 0;
     }
 
     let validSpecial = document.querySelector('#validSpecial');
     if (inputPassword.value.match(/[ #[\]()@$&*!?|,.^/\\+_\- ]/)) {
         formInputStatus(validSpecial, true);
-        // validSpecial.classList.remove('invalid-feedback');
-        // validSpecial.classList.add('valid-feedback');
         validSpecial = 1;
     } else {
         formInputStatus(validSpecial, false);
-        // validSpecial.classList.remove('valid-feedback');
-        // validSpecial.classList.add('invalid-feedback');
         validSpecial = 0;
     }
 
